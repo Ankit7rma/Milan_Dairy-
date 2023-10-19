@@ -11,9 +11,9 @@ function App() {
     scroll.scrollToTop();
   };
 
-  return (<><Header scrollToTop={scrollToTop} />
+  return (<>
     <div className="App">
-      
+    <Header scrollToTop={scrollToTop} className="fixed top-0" />      
       <Element name="home">
         <Home />
       </Element>
@@ -23,8 +23,9 @@ function App() {
       <Element name="contact">
         <Contact />
       </Element>
+    <button onClick={scrollToTop}>Scroll to Top</button>
     </div>
-    <button onClick={scrollToTop}>Scroll to Top</button></>
+    </>
   );
 }
 
