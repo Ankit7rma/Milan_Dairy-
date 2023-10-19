@@ -1,24 +1,37 @@
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import "../index.css"
 
 const Header = () => {
-  return (
-    <header className="header">
-      <div className="logo">Milan Dairy</div>
+  return (<>
+    <header className="header flex  gap-6 sticky ">
+      <div className="logo">
+        <Link to="home" smooth={true} duration={500}>
+          Milan Dairy
+        </Link>
+      </div>
       <nav>
-        <ul className="nav-links">
+        <ul className="nav-links flex cursor-pointer gap-6 ">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="home" smooth={true} duration={500}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="about" smooth={true} duration={500}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
+      
+    </>
   );
 };
 
